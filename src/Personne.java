@@ -1,4 +1,3 @@
-import java.util.Arrays;
 
 
 public class Personne {
@@ -8,10 +7,18 @@ public class Personne {
 	private String nom;
 	private int age;
 	public Boolean feminin;
-	public String localisation;
-	 
+//	public String localisation;
+	public Adresse nouvelleadresse;
 	
-	 public String getPrenom() {
+	 public Adresse getNouvelleadresse() {
+		return nouvelleadresse;
+	}
+
+	public void setNouvelleadresse(Adresse nouvelleadresse) {
+		this.nouvelleadresse = nouvelleadresse;
+	}
+
+	public String getPrenom() {
 		return prenom;
 	}
 
@@ -43,40 +50,45 @@ public class Personne {
 		this.feminin = feminin;
 	}
 
-	public String getLocalisation() {
+/*	public String getLocalisation() {
 		return localisation;
-	}
+	}*/
 
-	public void setLocalisation(String localisation) {
+/*	public void setLocalisation(String localisation) {
 		this.localisation = localisation;
-	}
 	
-	public Personne(String prenom, String nom, int age, Boolean feminin, String localisation) {
+	}*/	
+	
+	
+
+	public Personne(String prenom, String nom, int age, Boolean feminin, Adresse nouvelleadresse) {
 		super();
 		this.prenom = prenom;
 		this.nom = nom;
 		this.age = age;
 		this.feminin = feminin;
-		this.localisation = localisation;
+/*		this.localisation = localisation;*/
+		this.nouvelleadresse = nouvelleadresse;
 	}
 
 	@Override
 	public String toString() {
 		return "Personne [prenom=" + prenom + ", nom=" + nom + ", age=" + age
-				+ ", sexe=" + feminin + ", localisation="
-				+ localisation + "]";
+				+ ", feminin=" + feminin
+				+ ", nouvelleadresse=" + nouvelleadresse + "]";
 	}
-	
+
 	public void declineTonIdentite() {
         System.out.println("je m'appelle " + this.nom + " " + this.prenom);
     }
 	public void fetemonanniversaire () {
 		System.out.println("aujourd'hui j'ai "+this.age+" ans");
 	}
-	public void demenage () {
+/*	public void demenage () {
 		this.localisation = "Paris";
 		System.out.println ("j'ai demenage de " +this.localisation);
-	}
+	}*/
+
 	
 	
 	
